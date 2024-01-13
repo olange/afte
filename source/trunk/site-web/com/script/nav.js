@@ -2,8 +2,8 @@
 // After All | Yves Kropf
 // $Id$
 //
-// (c) Le Petit Atelier de Génie logiciel, http://www.petit-atelier.ch/,
-// à l'exception des fonctions conçues par Macromedia et générées par
+// (c) Le Petit Atelier de GÃ©nie logiciel, http://www.petit-atelier.ch/,
+// Ã  l'exception des fonctions conÃ§ues par Macromedia et gÃ©nÃ©rÃ©es par
 // par l'outil Macromedia Dreamweaver, http://www.macromedia.com/.
 
 /* Functions that locates a property within the DOM. */

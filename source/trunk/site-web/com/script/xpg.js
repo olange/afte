@@ -2,16 +2,16 @@
 // After All | Yves Kropf
 // $Id$
 //
-// Librairie de fonctions JavaScript de chiffrage/déchiffrage élémentaire
-// d'adresses de courrier électronique.
+// Librairie de fonctions JavaScript de chiffrage/dÃ©chiffrage Ã©lÃ©mentaire
+// d'adresses de courrier Ã©lectronique.
 //
-// (c) 2001-2009 Le Petit Atelier de Génie logiciel, Olivier Lange
+// (c) 2001-2009 Le Petit Atelier de GÃ©nie logiciel, Olivier Lange
 //
 // Consultez http://www.petit-atelier.ch/ pour contacter l'auteur
 // et http://www.petit-atelier.ch/email.html pour un formulaire interactif
 // permettant de chiffrer les adresses.
 //
-// Ce script est distribué selon les termes de le GNU General Public License
+// Ce script est distribuÃ© selon les termes de le GNU General Public License
 // (voir http://www.fsf.org/licensing/licenses/gpl.html et la notice qui suit).
 //
 // This program is free software; you can redistribute it and/or modify
@@ -30,13 +30,13 @@
 
 
 function xpgEmailUncrypt( sCrypt) { //v1.1, olange
-// Déchiffrage d'une chaîne de caractères encodée par la fonction XSL 'xpg.util.emailEncrypt'
-// ou la fonction 'xpgEmailEncrypt' (voir ci-après).
+// DÃ©chiffrage d'une chaÃ®ne de caractÄres encodÃ©e par la fonction XSL 'xpg.util.emailEncrypt'
+// ou la fonction 'xpgEmailEncrypt' (voir ci-aprÄs).
 //
-// @param sCrypt  chaîne de caractères contenant l'adresse de courrier électronique
-//   (ou toute chaîne de caractères) qui doit être encodée.
+// @param sCrypt  chaÃ®ne de caractÄres contenant l'adresse de courrier Ã©lectronique
+//   (ou toute chaÃ®ne de caractÄres) qui doit Ä™tre encodÃ©e.
 //
-// @returns  la chaîne de caractères encodée.
+// @returns  la chaÃ®ne de caractÄres encodÃ©e.
   var sSrc = "|zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA.@_-=9876543210";
   var sDst = "%0123456789=-_@.ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
   return xpgTranslate( sCrypt, sSrc, sDst);
@@ -44,22 +44,22 @@ function xpgEmailUncrypt( sCrypt) { //v1.1, olange
 
 
 function xpgEmailCrypt( sEmail) { //v1.1, olange
-// Chiffrage symétrique d'une chaîne de caractères. L'encodage, très simple et symétrique,
-// n'a pour but que d'empêcher des aspirateurs d'adresses de courrier électronique d'identifier
-// celles-ci; il est obtenu par une transposition élémentaire de tous les caractères, y compris
-// de ceux qui forment le protocole. Pour décoder, nous transposons simplement dans "l'autre sens".
+// Chiffrage symÃ©trique d'une chaÃ®ne de caractÄres. L'encodage, trÄs simple et symÃ©trique,
+// n'a pour but que d'empÄ™cher des aspirateurs d'adresses de courrier Ã©lectronique d'identifier
+// celles-ci; il est obtenu par une transposition Ã©lÃ©mentaire de tous les caractÄres, y compris
+// de ceux qui forment le protocole. Pour dÃ©coder, nous transposons simplement dans "l'autre sens".
 //
-// Note: cette fonction doit être en phase avec la fonction 'xpg.util.emailEncrypt' du script
+// Note: cette fonction doit Ä™tre en phase avec la fonction 'xpg.util.emailEncrypt' du script
 // XSL 'transform/xpage/xpg-util.inc.xsl').
 //
-// Note: le caractère pourcent '%' ne doit pas figurer dans la chaîne chiffrée, car il serait
-// interprété par le navigateur comme séquence spéciale avant d'être déchiffré. On le remplace
-// ici par le caractère pipe '|', qui ne devrait pas se trouver dans une adresse email.
+// Note: le caractÄre pourcent '%' ne doit pas figurer dans la chaÃ®ne chiffrÃ©e, car il serait
+// interprÃ©tÃ© par le navigateur comme sÃ©quence spÃ©ciale avant d'Ä™tre dÃ©chiffrÃ©. On le remplace
+// ici par le caractÄre pipe '|', qui ne devrait pas se trouver dans une adresse email.
 //
-// @param sCrypt  chaîne de caractères contenant l'adresse de courrier électronique
-//   (ou toute chaîne de caractères) qui doit être décodée.
+// @param sCrypt  chaÃ®ne de caractÄres contenant l'adresse de courrier Ã©lectronique
+//   (ou toute chaÃ®ne de caractÄres) qui doit Ä™tre dÃ©codÃ©e.
 //
-// @returns  la chaîne de caractères décodée.
+// @returns  la chaÃ®ne de caractÄres dÃ©codÃ©e.
   var sSrc = "%0123456789=-_@.ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
   var sDst = "|zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA.@_-=9876543210";
   return xpgTranslate( sEmail, sSrc, sDst);
@@ -67,21 +67,21 @@ function xpgEmailCrypt( sEmail) { //v1.1, olange
 
 
 function xpgTranslate( sText, sMapSrc, sMapDst) { //v1.0, olange
-// Transpose les caractères d'une chaîne de caractères à partir d'une table de correspondance,
-// à la façon de la fonction XPath 'translate()'. Les caractères qui ne figurent pas dans
+// Transpose les caractÄres d'une chaÃ®ne de caractÄres Å• partir d'une table de correspondance,
+// Å• la faÃ§on de la fonction XPath 'translate()'. Les caractÄres qui ne figurent pas dans
 // la table de correspondance sont transcrits tels quels.
 //
-// @param sText  chaîne de caractères dont les caractères doivent être transposés.
+// @param sText  chaÃ®ne de caractÄres dont les caractÄres doivent Ä™tre transposÃ©s.
 //
-// @param sMapSrc  chaîne de caractères représentant la source de la table de correspondance.
+// @param sMapSrc  chaÃ®ne de caractÄres reprÃ©sentant la source de la table de correspondance.
 //
-// @param sMapDest  chaîne de caractères représentant la destination de la table de correspondance.
+// @param sMapDest  chaÃ®ne de caractÄres reprÃ©sentant la destination de la table de correspondance.
 //
-// @returns  la chaîne de caractères transposée.
+// @returns  la chaÃ®ne de caractÄres transposÃ©e.
 //
-// @assert  que les paramètres sMapSrc et sMapDst doivent contiennent le même nombre de
-//   caractères, c'est-à-dire qu'il existe une correspondance dans sMapDst pour chaque
-//   caractère de sMapSrc.
+// @assert  que les paramÄtres sMapSrc et sMapDst doivent contiennent le mÄ™me nombre de
+//   caractÄres, c'est-Å•-dire qu'il existe une correspondance dans sMapDst pour chaque
+//   caractÄre de sMapSrc.
 
   var i,j,c;
   var sResult = '';
@@ -99,16 +99,16 @@ function xpgTranslate( sText, sMapSrc, sMapDst) { //v1.0, olange
 
 
 function xpgGotoURL( sURL) {
-// Commande le chargement d'une nouvelle ressource dans la fenêtre
+// Commande le chargement d'une nouvelle ressource dans la fenÄ™tre
 // courante du navigateur. La fonction interrompt le flux de traitement
-// et ne retourne pas à l'appelant.
+// et ne retourne pas Å• l'appelant.
 
   window.location.href = sURL;
 } // xpgGotoURL
 
 
 function xpgSetStatus( sText) {
-// Définit le texte de la barre d'état du navigateur.
+// DÃ©finit le texte de la barre d'Ã©tat du navigateur.
 
   window.status = sText;
   return true;
@@ -116,7 +116,7 @@ function xpgSetStatus( sText) {
 
 
 function xpgClearStatus() {
-// Supprime le texte de la barre d'état du navigateur.
+// Supprime le texte de la barre d'Ã©tat du navigateur.
 
   window.status = '';
   return true;
