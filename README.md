@@ -12,10 +12,13 @@ In production.
 
 |Component|Description|
 |---|---|
-|[`source/trunk/site-web`](source/trunk/site-web)|Source of static website|
-|[`source/trunk/design-factory`](source/trunk/design-factory)|Source of graphic assets|
-|[`source/trunk/conf`](source/trunk/conf)|Service Management|
+|[`site-web/`](site-web/)|Source of static website|
+|[`design-factory/`](design-factory/)|Source of graphic assets|
+|[`conf/`](conf/)|Service Management|
 
 ## License
+
+Copyright 2009 Yves Kropf (images).  
+Copyright 2009 Olivier Lange (code).
 
 Distributed under the Apache-2.0 license. See [LICENSE](LICENSE) for details.
