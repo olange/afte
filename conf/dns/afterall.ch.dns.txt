@@ -1,28 +1,33 @@
-
-; <<>> DiG 9.3.2 <<>> @ns.ch-inter.net afterall.ch any
-; (1 server found)
-;; global options:  printcmd
+; <<>> DiG 9.10.6 <<>> @ns-34-a.gandi.net afterall.ch any
+; (2 servers found)
+;; global options: +cmd
 ;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 212
-;; flags: qr aa rd; QUERY: 1, ANSWER: 5, AUTHORITY: 0, ADDITIONAL: 3
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 19947
+;; flags: qr aa rd; QUERY: 1, ANSWER: 10, AUTHORITY: 0, ADDITIONAL: 2
+;; WARNING: recursion requested but not available
 
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
 ;; QUESTION SECTION:
 ;afterall.ch.			IN	ANY
 
 ;; ANSWER SECTION:
-afterall.ch.		43200	IN	SOA	ns.ch-inter.net. hostmaster.metanet.ch. 2007102001 10800 3600 604800 43200
-afterall.ch.		43200	IN	NS	ns.ch-inter.net.
-afterall.ch.		43200	IN	NS	ns2.ch-inter.net.
-afterall.ch.		43200	IN	MX	10 mail.afterall.ch.
-afterall.ch.		43200	IN	A	80.74.144.100
+afterall.ch.		300	IN	A	185.199.108.153
+afterall.ch.		300	IN	A	185.199.109.153
+afterall.ch.		300	IN	A	185.199.110.153
+afterall.ch.		300	IN	A	185.199.111.153
+afterall.ch.		300	IN	MX	10 mail.afterall.ch.
+afterall.ch.		300	IN	TXT	"v=spf1 include:_spf.sui-inter.net +mx +a ~all"
+afterall.ch.		10800	IN	NS	ns-34-a.gandi.net.
+afterall.ch.		10800	IN	NS	ns-75-b.gandi.net.
+afterall.ch.		10800	IN	NS	ns-246-c.gandi.net.
+afterall.ch.		10800	IN	SOA	ns1.gandi.net. hostmaster.gandi.net. 1705224407 10800 3600 604800 10800
+afterall.ch.	www	300	IN	CNAME	afterall.ch.
 
 ;; ADDITIONAL SECTION:
-ns.ch-inter.net.	43200	IN	A	80.74.130.180
-ns2.ch-inter.net.	43200	IN	A	80.74.144.45
-mail.afterall.ch.	43200	IN	A	80.74.144.100
+mail.afterall.ch.	300	IN	A	80.74.144.100
 
-;; Query time: 15 msec
-;; SERVER: 80.74.130.180#53(80.74.130.180)
-;; WHEN: Wed Jun 03 22:37:56 2009
-;; MSG SIZE  rcvd: 216
-
+;; Query time: 23 msec
+;; SERVER: 2001:4b98:aaaa::23#53(2001:4b98:aaaa::23)
+;; WHEN: Sun Jan 14 11:01:32 CET 2024
+;; MSG SIZE  rcvd: 326

@@ -5,8 +5,8 @@
 
 @echo off
 
-dig @ns.ch-inter.net afterall.ch any
-dig @ns.ch-inter.net afterall.ch any > afterall.ch.dns.txt
+dig @ns-34-a.gandi.net afterall.ch any
+dig @ns-34-a.gandi.net afterall.ch any > afterall.ch.dns.txt
 
 pause
 :: eof
