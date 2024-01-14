@@ -1,5 +1,7 @@
 # After All
 
+[![Deploy static content to Pages](https://github.com/olange/afte/actions/workflows/static.yml/badge.svg)](https://github.com/olange/afte/actions/workflows/static.yml)
+
 Website of Yves Kropf, videographer, Switzerland.
 
 ## Status
